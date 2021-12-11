@@ -17,6 +17,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name' => 'Arel Smith',
+            'username' => 'arel576',
+            'email' => 'arelarel576@gmail.com',
+            'password' => Hash::make('password')
+        ]);
+
         User::factory(3)->create();
 
         Category::create([
@@ -35,6 +42,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        Post::factory(50)->create();
+        Post::factory(20)->create();
     }
 }
